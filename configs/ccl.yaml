@@ -1,0 +1,25 @@
+model:
+  name: ccl
+  arch: deberta
+  framework: 
+  scale: base
+  threshold: 0.0
+  drop_rate: 0.1
+  use_adapter: true
+  weight: 0.06
+  use_scl: -1
+  asp_first: rand
+  epoch_every: true
+
+train:
+  device_ids: [0]
+  epochs: 16
+  early_stop: 10
+  batch_size: 32
+  log_step_rate: 1.0
+  learning_rate: 0.00005
+  learning_rate_pre: 0.00005
+  save_model: 0
+  inference: 0
+  do_test: false
+  wandb: 0
